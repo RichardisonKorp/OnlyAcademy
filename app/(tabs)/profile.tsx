@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { useRouter } from 'expo-router';
 
 export default function ProfileScreen() {
-
-  const navigation = useNavigation();
+  
+  const router = useRouter();
   const [selectedTab, setSelectedTab] = useState('All');
 
-  const handleBackButton = () => {
-    // navigation.navigate ('index');
+  const handleBackHomeButton = () => {
+    router.push('/');
   };
 
   return (
@@ -18,7 +18,7 @@ export default function ProfileScreen() {
         <Image style={styles.headerImage} source={require('../../assets/images/fundo.jpg')}/>
       </View>
       <View style={styles.profileContainer}>
-        <TouchableOpacity style={styles.iconLeft} onPress={handleBackButton}>
+        <TouchableOpacity style={styles.iconLeft} onPress={handleBackHomeButton}>
           <View style={styles.roundButton}>
             <Ionicons name="arrow-back" size={24} color="#000" />
           </View>

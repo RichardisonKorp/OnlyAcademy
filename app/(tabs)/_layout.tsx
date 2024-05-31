@@ -59,6 +59,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="payment"
+        options={{
+          title: 'Plans VIP',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'basket' : 'basket-outline'} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
