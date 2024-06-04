@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Button } from 'react-native';
-import CameraComponent from '../../components/Camera'; // Certifique-se de importar o componente CameraComponent corretamente
+import CameraComponent from '../../components/Camera';
 
 const Add = () => {
   const [isCameraActive, setIsCameraActive] = useState(false);
