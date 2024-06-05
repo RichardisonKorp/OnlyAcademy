@@ -16,7 +16,7 @@ export default function PaymentScreen() {
   const handlePayment = async () => {
     const data = await handleIntegrationMP(checked);
     if (!data) {
-      return console.log('Ocorreu algum erro!!');
+      return console.log('Ocorreu algum erro !!!');
     }
     Linking.openURL(data);
   };

@@ -15,7 +15,7 @@ export const handleIntegrationMP = async (type) => {
                 "unit_price": value,
             },
         ],
-        "auto_return": "all"
+        // "auto_return": "all"
     }
     try {
         const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
@@ -27,7 +27,9 @@ export const handleIntegrationMP = async (type) => {
             body: JSON.stringify(preference)
         })
         const data = await response.json()
+        console.log (data);
         return data.init_point
+        
     } catch (error) {
         console.log(error)
     }
