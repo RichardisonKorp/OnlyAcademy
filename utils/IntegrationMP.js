@@ -27,7 +27,7 @@ export const handleIntegrationMP = async (type) => {
             body: JSON.stringify(preference)
         })
         const data = await response.json()
-        console.log (data);
+        console.log (data.init_point);
         return data.init_point
         
     } catch (error) {

@@ -44,7 +44,7 @@ export default function PaymentScreen() {
               status={checked === 'first' ? 'checked' : 'unchecked'}
               onPress={() => setChecked('first')}
             />
-            <TouchableOpacity onPress={() => setChecked('first')}>
+            <TouchableOpacity onPress={() => setChecked('f')}>
               <Text style={styles.viewCheckboxText}>Free</Text>
             </TouchableOpacity>
           </View>
