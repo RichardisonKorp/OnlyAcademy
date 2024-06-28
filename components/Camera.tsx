@@ -4,15 +4,13 @@ import { CameraView, useCameraPermissions } from 'expo-camera';
 
 export default function App() {
   const [permission, requestPermission] = useCameraPermissions();
-  const [facingMode, setFacingMode] = useState<'front' | 'back'>('back'); // 'front' câmera frontal, 'back' câmera traseira
+  const [facingMode, setFacingMode] = useState<'front' | 'back'>('back');
 
   if (!permission) {
-    // As permissões da câmera ainda estão sendo carregadas.
     return <View />;
   }
 
   if (!permission.granted) {
-    // As permissões da câmera ainda não foram concedidas.
     return (
       <View style={styles.container}>
         <Text style={{ textAlign: 'center' }}>Precisamos da sua permissão para mostrar a câmera</Text>

@@ -12,6 +12,10 @@ export default function ProfileScreen() {
     router.push('/');
   };
 
+  const handleBackEditButton = () => {
+    router.push('/account');
+  };
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -23,9 +27,9 @@ export default function ProfileScreen() {
             <Ionicons name="arrow-back" size={24} color="#000" />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.iconRight}>
+        <TouchableOpacity style={styles.iconRight} onPress={handleBackEditButton}>
           <View style={styles.roundButton}>
-            <Ionicons name="mail" size={24} color="#000" />
+            <Ionicons name="pencil" size={24} color="#000" />
           </View>
         </TouchableOpacity>
         <Image
